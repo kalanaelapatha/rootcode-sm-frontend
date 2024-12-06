@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# RootCodeLabs Social Media Frontend Guide
+This repository contains the source code relates to RootCodeLabs social media Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a [React.js](https://react.dev/) project bootstrapped with [`create vite`](https://vitejs.dev/guide/).
 
-Currently, two official plugins are available:
+## Application structure
+Source of the application is structured according to the following structure.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Setting up the development environment.
 
-- Configure the top-level `parserOptions` property like this:
+#### Recommended IDE
+Visual Studio Code is recommended for local development.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+#### Install dependencies
+
+> [!IMPORTANT]
+> node version 18.x.x has been used and tested in the dev environment. Not encourage to use any lower version.
+
+
+Execute below Yarn script in the root directory to install required dependencies.
+
+```bash
+yarn install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+#### Environment configuration
+Read **.env.example** to find all the required env configurations. Strongly recommended to update the .env.example file if there is any change added to env configurations.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Starting the development server
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+> [!IMPORTANT]
+> Prerequisite for the development environment should be configured properly before apply any changes to the application source code. (Refer the **"Setting up the development environment"** section. )
+
+Run the development server with:
+
+```bash
+npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
+
+You can start editing the source code. The page auto-updates as you edit the file.
