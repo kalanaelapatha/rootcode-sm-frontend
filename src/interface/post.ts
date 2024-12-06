@@ -10,3 +10,16 @@ export interface Post {
     id: number
     content: string
   }
+
+  export interface PostState {
+    isLoading: boolean
+    status: APP_STATUS
+    message: string
+    allPosts: Post[]
+  }
+
+  export enum APP_STATUS {
+    SUCCESS = 'SUCCESS',
+    ERROR = 'ERROR',
+    INITIAL = 'INITIAL'
+}
